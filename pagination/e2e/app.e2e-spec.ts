@@ -1,10 +1,10 @@
-import { CompCollectionPage } from './app.po';
+import { NewsAppPage } from './app.po';
 
-describe('comp-collection App', function() {
-  let page: CompCollectionPage;
+describe('news-app App', function() {
+  let page: NewsAppPage;
 
   beforeEach(() => {
-    page = new CompCollectionPage();
+    page = new NewsAppPage();
   });
 
   it('should display message saying app works', () => {

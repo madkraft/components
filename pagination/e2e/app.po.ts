@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class CompCollectionPage {
+export class NewsAppPage {
   navigateTo() {
     return browser.get('/');
   }

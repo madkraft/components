@@ -1,0 +1,20 @@
+<div class="home">
+  <div class="content">
+    <div *ngFor="let item of response.data">
+      <h2>
+        {{item.attributes.title}}  
+      </h2>
+      {{item.attributes.body}}
+    </div>
+  </div>
+
+  <app-pagination
+    [itemsTotal]="response.meta.totalPages"
+    [itemsOnPage]="pageSize"
+    [hideOnSinglePage]="false"
+    (onChange)="onPageChange($event)">
+  </app-pagination>
+
+
+
+</div>
