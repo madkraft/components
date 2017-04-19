@@ -1,18 +1,12 @@
-<div class="row gallery">
-  <main class="col-xs-9 main-img">
-    <img src="{{currentImage.full}}" alt="">
-    <div class="prev" (click)="prev()">Prev</div>
-    <div class="next" (click)="next()">Next</div>
-  </main>
-  <aside class="col-xs-3">
-    <ul class="row">
-      <li
-        *ngFor="let image of images;"
-        class="img-item" 
-        [class.current-item]="image.thumb === currentImage.thumb"
-        (click)="onImgClick(image)">
-        <img src="{{image.thumb}}" alt="">
-      </li>
-    </ul>
-  </aside>
+<div>
+  <app-pagination-next
+    limit="10"
+    [actualCount]="posts.length">
+  </app-pagination-next>
+
+  <div *ngFor="let post of posts">
+    <h5>{{ post.title }}</h5>
+    <p>{{ post.body }}</p>
+  </div>
+
 </div>
